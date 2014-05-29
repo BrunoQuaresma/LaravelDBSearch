@@ -66,7 +66,7 @@ Get the courses where the owner have a name with `John`.
 ```php
 $courses =  LaravelDBSearch::model('Course')			
 				->field(array('name', 'description', 'first_name', 'last_name', 'username'))
-				->join('users', 'courses.user_id', '=', 'users.id')
+				->join('courses.*', 'users', 'courses.user_id', '=', 'users.id')
 				->query('John')
 				->get();
 ```
