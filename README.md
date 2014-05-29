@@ -30,7 +30,7 @@ In your `config/app.php` add `'Brunoquaresma\LaravelDBSearch\LaravelDBSearchServ
 ),
 ```
 
-At the end of `config/app.php` add `'Entrust'    => 'Zizaco\Entrust\EntrustFacade'` to the `$aliases` array
+At the end of `config/app.php` add `'LaravelDBSearch' => 'Brunoquaresma\LaravelDBSearch\Facades\LaravelDBSearch'` to the `$aliases` array
 
 ```php
 'aliases' => array(
