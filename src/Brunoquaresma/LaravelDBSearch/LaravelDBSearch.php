@@ -98,6 +98,7 @@ class LaravelDBSearch {
 	/**
 	* Add join.
 	*
+	* @param string $select
 	* @param string $table
 	* @param string $first
 	* @param string $operator
@@ -105,9 +106,9 @@ class LaravelDBSearch {
 	* @param string $type = 'inner'
 	* @return this
 	*/	
-	public function join($table, $first, $operator, $second, $type = 'inner')
+	public function join($select, $table, $first, $operator, $second, $type = 'inner')
 	{		
-		self::$eloquentModel = self::$eloquentModel->join($table, $first, $operator, $second, $type);
+		self::$eloquentModel = self::$eloquentModel->select($select)->join($table, $first, $operator, $second, $type);
 		return $this;
 	}
 	
